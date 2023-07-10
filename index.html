@@ -6,9 +6,37 @@
     <meta name="description" content="The snake game is a classic and popular arcade-style video game in which players control a snake that grows longer as it eats food.">
     <meta name="keywords" content="Game, Snake, Apple, Score, Snake Game, Retro, Grid, Food, Challenge, Tail">
     <meta name="author" content="Aleksandra Suchojad">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Snake Game</title>
 </head>
 <body>
-    
-</body>
+    <main>
+        <!-- Modal with how to play instructions -->
+        <dialog data-modal id="how-to-play-modal">
+            <button type="button" class="close" data-close-modal aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <h2>How to Play</h2>
+            <ul>
+                <li>Guide the snake around the game area.</li>
+                <li>Collect food to increase your Score.</li>
+                <li>If the snake hits the barrier or itself, it's game over!</li>
+            </ul>
+        </dialog>
+         <!-- Game Area -->
+        <section class="game-container">
+            <div class="game-details">
+                <div class="game-heading">
+                    <h1>Snake Game</h1>
+                </div>
+                <div class="game-menu">
+                    <h2>Choose Your Difficulty!</h2>
+                    <div class="row">
+                        <button class="difficulty-button" id="easy-button">Easy</button>
+                        <button class="difficulty-button" id="hard-button">Hard</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </html>
