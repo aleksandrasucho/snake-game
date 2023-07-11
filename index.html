@@ -12,29 +12,24 @@
 </head>
 <body>
     <main>
-        <!-- Modal with how to play instructions -->
-        <dialog data-modal id="how-to-play-modal">
-            <button type="button" class="close" data-close-modal aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            <h2>How to Play</h2>
-            <ul>
-                <li>Guide the snake around the game area.</li>
-                <li>Collect food to increase your Score.</li>
-                <li>If the snake hits the barrier or itself, it's game over!</li>
-            </ul>
-        </dialog>
-         <!-- Game Area -->
+         <!-- Game Menu Area -->
         <section class="game-container">
             <div class="game-details">
                 <div class="game-heading">
                     <h1>Snake Game</h1>
                 </div>
                 <div class="game-menu">
-
-
-
-                    
+                    <!--Game Instructions-->
+                    <div class="how-to-play">
+                        <h2>How To Play:</h2>
+                        <ul id="instructions">
+                             <li>Use ARROW keys or TOUCH ARROWS to move!</li>
+                            <li>Guide the snake around the game area.</li>
+                            <li>Collect food to increase your Score.</li>
+                            <li>If the snake hits the barrier or itself, it's game over!</li>
+                        </ul>
+                    </div>
+                    <!--Level of Difficulty also starts the game-->
                     <h2 class="level">Choose Your Difficulty!</h2>
                     <div class="row">
                         <button class="difficulty-button" id="easy-button">Easy</button>

@@ -14,7 +14,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    font-family: Inter, sans-serif;;
+    font-family: Inter, sans-serif;
+    background-color: #6FF562;
 }  
 
 main {
