@@ -23,7 +23,8 @@ main {
     flex: 1 0 auto;
 }
 
-.menu-container {
+/*Game Menu Area */
+#menu-container {
     width: 80vmin;
     height: 90vmin;
     display: flex;
@@ -87,10 +88,6 @@ main {
 
 .game-menu {
     text-align: center;
-    
-    
-    
-
 }
 
 .row {
@@ -116,8 +113,17 @@ main {
     cursor: pointer;
     margin: 0.8em;
     background-color: #6ff562;
-
 }
+
+.difficulty-button:hover {
+    background-color: #ffff;
+}
+
+/* Game Screen */
+
+
+
+
 /* Footer */
 footer {
     display: flex;
