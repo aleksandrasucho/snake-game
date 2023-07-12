@@ -6,13 +6,12 @@
     <meta name="description" content="The snake game is a classic and popular arcade-style video game in which players control a snake that grows longer as it eats food.">
     <meta name="keywords" content="Game, Snake, Apple, Score, Snake Game, Retro, Grid, Food, Challenge, Tail">
     <meta name="author" content="Aleksandra Suchojad">
-    <script src="https://kit.fontawesome.com/6dc5ea7d90.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Snake Game</title>
 </head>
 <body>
          <!-- Game Menu Area -->
-        <section id="menu-container">
+        <section id="menu-screen">
             <div class="game-details">
                 <div class="game-heading">
                     <h1>Snake Game</h1>
@@ -32,17 +31,38 @@
                         </ul>
                     </div>
                     <!--Level of Difficulty also starts the game-->
-                    <h2 class="level">Choose Your Difficulty!</h2>
+                    <h2 class="level">Choose Your Difficulty and Start the Game!</h2>
                     <div class="row">
                         <button class="difficulty-button" id="easy-button">Easy</button>
                         <button class="difficulty-button" id="hard-button">Hard</button>
                     </div>
         </section>
         <section id="game-screen">
-            
+
             <!--Game Screen-->
                 <div class="game-container">
-                    <h2>Score:</h2>
+                    <!--Game Controls-->
+                    <span class="score">Score: 0</span>
+                    <span class="high-score">High Score: 0</span>
+                    <div class="play-or-pause-control hide">
+                        <i class="fas fa-pause"></i>
+                        <i class="fas fa-play hide"></i>
+                        <i class="fas fa-stop"></i>
+                    <div class="game-grid"></div>
+                    <div class="controls">
+                        <i data-key="ArrowLeft" class="fa-solid fa-arrow-left-long"></i>
+                        <i data-key="ArrowUp" class="fa-solid fa-arrow-up-long"></i>
+                        <i data-key="ArrowRight" class="fa-solid fa-arrow-right-long"></i>
+                        <i data-key="ArrowDown" class="fa-solid fa-arrow-down-long"></i>
+                      </div>
+                </div>
+                <!--Game Over Screen-->
+                <div id="game-over-screen">
+                    <div class="modal">
+                        <span class="close"><i class="fas fa-times"></i></span>
+                        <h2 class="modal-header">Game Over!</h2>
+                        <p id="modal-result"></p>
+                    </div>
                 </div>
 
         </section>
@@ -65,5 +85,10 @@
           </li>
         </ul>
       </footer>
+      <!--Scripts-->
+      <!--Font Awesome-->
+      <script src="https://kit.fontawesome.com/6dc5ea7d90.js" crossorigin="anonymous"></script>
+      <!--JavaScript-->
+      <script src="assets/js/script.js"></script>
 </body>
 </html>
