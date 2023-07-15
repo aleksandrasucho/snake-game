@@ -123,11 +123,87 @@ main {
 }
 
 /* Game Screen */
-
-#game-screen {
+.hidden {
     display: none;
+  }
+
+  .game-screen {
+    display: none;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #game-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .score {
+    border: 2px solid #000;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 0 auto;
+    background-color: #6ff562;
+    margin-bottom: 5px;
+  }
+  
+  .high-score {
+    border: 2px solid #000;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 0 auto;
+    background-color: #6ff562;
+    margin-bottom: 5px;
+  }
+  
+
+  .play-or-pause-control {
+    top: 10px;
+    left: 100px;
+    color: #fff;
+  }
+  
+  .play-or-pause-control .hide {
+    display: none;
+  }
+
+  .game-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30rem;
+    height: 30rem;
+    border: solid 2px #6ff562;
+}
+.square {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 35%;
 }
 
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .fa-arrow-left-long,
+  .fa-arrow-up-long,
+  .fa-arrow-right-long,
+  .fa-arrow-down-long {
+    margin: 0 5px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    justify-content: center;
+  }
 
 /* Footer */
 footer {

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The snake game is a classic and popular arcade-style video game in which players control a snake that grows longer as it eats food.">
@@ -8,87 +8,87 @@
     <meta name="author" content="Aleksandra Suchojad">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Snake Game</title>
-</head>
-<body>
-         <!-- Game Menu Area -->
-        <section id="menu-screen">
-            <div class="game-details">
-                <div class="game-heading">
-                    <h1>Snake Game</h1>
-                </div>
-                <div class="snake-image">
-                    <img src="assets/images/snake-logo.png" alt="a coiled snake, hissing">
-                </div>
-                <div class="game-menu">
-                    <!--Game Instructions-->
-                    <div class="how-to-play">
-                        <h2>How To Play:</h2>
-                        <ul class="instructions">
-                             <li>Use ARROW keys or TOUCH ARROWS to move!</li>
-                            <li>Guide the snake around the game area.</li>
-                            <li>Collect food to increase your Score.</li>
-                            <li>If the snake hits the barrier or itself, it's game over!</li>
-                        </ul>
-                    </div>
-                    <!--Level of Difficulty also starts the game-->
-                    <h2 class="level">Choose Your Difficulty and Start the Game!</h2>
-                    <div class="row">
-                        <button class="difficulty-button" id="easy-button">Easy</button>
-                        <button class="difficulty-button" id="hard-button">Hard</button>
-                    </div>
-        </section>
-        <section id="game-screen">
-
-            <!--Game Screen-->
-                <div class="game-container">
-                    <!--Game Controls-->
-                    <span class="score">Score: 0</span>
-                    <span class="high-score">High Score: 0</span>
-                    <div class="play-or-pause-control hide">
-                        <i class="fas fa-pause"></i>
-                        <i class="fas fa-play hide"></i>
-                        <i class="fas fa-stop"></i>
-                    <div class="game-grid"></div>
-                    <div id="controls">
-                        <i data-key="ArrowLeft" class="fa-solid fa-arrow-left-long"></i>
-                        <i data-key="ArrowUp" class="fa-solid fa-arrow-up-long"></i>
-                        <i data-key="ArrowRight" class="fa-solid fa-arrow-right-long"></i>
-                        <i data-key="ArrowDown" class="fa-solid fa-arrow-down-long"></i>
-                      </div>
-                </div>
-                <!--Game Over Screen-->
-                <div id="game-over-screen">
-                    <div class="modal">
-                        <span class="close"><i class="fas fa-times"></i></span>
-                        <h2 class="modal-header">Game Over!</h2>
-                        <p id="modal-result"></p>
-                    </div>
-                </div>
-
-        </section>
+  </head>
+  <body>
+    <!-- Game Menu Area -->
+    <section id="menu-screen">
+      <div class="game-details">
+        <div class="game-heading">
+          <h1>Snake Game</h1>
+        </div>
+        <div class="snake-image">
+          <img src="assets/images/snake-logo.png" alt="a coiled snake, hissing">
+        </div>
+        <div class="game-menu">
+          <!--Game Instructions-->
+          <div class="how-to-play">
+            <h2>How To Play:</h2>
+            <ul class="instructions">
+              <li>Use ARROW keys or TOUCH ARROWS to move!</li>
+              <li>Guide the snake around the game area.</li>
+              <li>Collect food to increase your Score.</li>
+              <li>If the snake hits the barrier or itself, it's game over!</li>
+            </ul>
+          </div>
+          <!--Level of Difficulty also starts the game-->
+          <h2 class="level">Choose Your Difficulty and Start the Game!</h2>
+          <div class="row">
+            <button class="difficulty-button" id="easy-button">Easy</button>
+            <button class="difficulty-button" id="hard-button">Hard</button>
+          </div>
+    </section>
+    <section id="game-screen" class="hidden">
+      <!--Game Screen-->
+      <div class="game-container">
+        <!--Game Controls-->
+        <span class="score">Score: 0</span>
+        <span class="high-score">High Score: 0</span>
+        <div class="play-or-pause-control hide">
+          <i class="fas fa-pause"></i>
+          <i class="fas fa-play hide"></i>
+          <i class="fas fa-stop"></i>
+          <div class="game-grid"></div>
+          <div id="controls">
+            <i data-key="ArrowLeft" class="fa-solid fa-arrow-left-long"></i>
+            <i data-key="ArrowUp" class="fa-solid fa-arrow-up-long"></i>
+            <i data-key="ArrowRight" class="fa-solid fa-arrow-right-long"></i>
+            <i data-key="ArrowDown" class="fa-solid fa-arrow-down-long"></i>
+          </div>
+        </div>
+        <!--Game Over Screen-->
+        <div id="game-over-screen">
+          <div class="modal">
+            <span class="close">
+              <i class="fas fa-times"></i>
+            </span>
+            <h2 class="modal-header">Game Over!</h2>
+            <p id="modal-result"></p>
+          </div>
+        </div>
+    </section>
     <footer>
-        <ul class="social-networks">
-          <li>
-            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Visit our Facebook page (opens in a new tab)">
-              <i class="fa-brands fa-square-facebook"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Visit our Instagram page (opens in a new tab)">
-              <i class="fa-brands fa-square-instagram"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Visit our Twitter page (opens in a new tab)">
-              <i class="fa-brands fa-square-twitter"></i>
-            </a>
-          </li>
-        </ul>
-      </footer>
-      <!--Scripts-->
-      <!--Font Awesome-->
-      <script src="https://kit.fontawesome.com/6dc5ea7d90.js" crossorigin="anonymous"></script>
-      <!--JavaScript-->
-      <script src="assets/js/script.js"></script>
-</body>
+      <ul class="social-networks">
+        <li>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Visit our Facebook page (opens in a new tab)">
+            <i class="fa-brands fa-square-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Visit our Instagram page (opens in a new tab)">
+            <i class="fa-brands fa-square-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Visit our Twitter page (opens in a new tab)">
+            <i class="fa-brands fa-square-twitter"></i>
+          </a>
+        </li>
+      </ul>
+    </footer>
+    <!--Scripts-->
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/6dc5ea7d90.js" crossorigin="anonymous"></script>
+    <!--JavaScript-->
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
