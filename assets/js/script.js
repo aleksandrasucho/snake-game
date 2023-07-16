@@ -1,6 +1,6 @@
 // Wait for the DOM to load
 document.addEventListener("DOMContentLoaded", function () {
-  // dom variables
+  // Dom variables
   const menuScreen = document.getElementById('menu-screen');
   const gameScreen = document.getElementById('game-screen');
   const gameOverScreen = document.getElementById('game-over-screen');
@@ -16,30 +16,25 @@ document.addEventListener("DOMContentLoaded", function () {
   const gridWidth = gameScreen.offsetWidth / gridSize;
   const gridHeight = gameScreen.offsetHeight / gridSize;
 
-  let Snake = [2, 1, 0];
+  // Game variables
+  let squares = [];
+  let currentSnake = [2, 1, 0];
   let direction = 1;
-  const width = 10;
+  let width = 10;
   let appleIndex = 0;
-
-  let currentIndex = 0;
-  let speed = 0.8;
+  let score = 0;
   let intervalTime = 1000;
   let interval = 0;
 
-  const food = {
-    x: Math.floor(Math.random() * gridWidth),
-    y: Math.floor(Math.random() * gridHeight),
-  };
-
-  let score = 0;
-  let highScore = 0;
-
-  difficultyBtnEasy.addEventListener("click", function () {
-    startGame("easy");
+  // Event listener for difficulty buttons
+  difficultyBtnEasy.addEventListener('click', () => {
+    intervalTime = 1000;
+    startGame();
   });
-
-  difficultyBtnHard.addEventListener("click", function () {
-    startGame("hard");
+  
+  difficultyBtnHard.addEventListener('click', () => {
+    intervalTime = 500;
+    startGame();
   });
 
   // Function to start the game based on the chosen difficulty
@@ -57,13 +52,16 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("Starting hard game");
     }
   }
-
-  // touch controls 
-  for (let i = 0; i < gameControls.length; i++) {
-    gameControls[i].addEventListener('click', gameControlsClicked);
+  
+  // Function to create the game grid
+  function createGrid() {
+    for (let i = 0; i < width * width; i++) {
+      const square = document.createElement('div');
+      square.classList.add('box');
+      gameGrid.appendChild(square);
+      squares.push(square);
+    }
   }
 
-  function gameControlsClicked(event) {
-    // Handle touch control events here
-  }
+  createGrid();
 });
