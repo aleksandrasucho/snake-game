@@ -145,35 +145,6 @@ main {
     height: 100vh;
   }
 
-  .score {
-    border: 2px solid #000;
-    padding: 5px;
-    border-radius: 10px;
-    margin: 0 auto;
-    background-color: #6ff562;
-    margin-bottom: 5px;
-  }
-  
-  .high-score {
-    border: 2px solid #000;
-    padding: 5px;
-    border-radius: 10px;
-    margin: 0 auto;
-    background-color: #6ff562;
-    margin-bottom: 5px;
-  }
-  
-
-  .play-or-pause-control {
-    top: 10px;
-    left: 100px;
-    color: #fff;
-  }
-  
-  .play-or-pause-control .hide {
-    display: none;
-  }
-
   .game-grid {
     display: flex;
     flex-wrap: wrap;
@@ -187,23 +158,66 @@ main {
     border-radius: 35%;
 }
 
-.controls {
+/*Game Score */
+
+.score-and-high-score {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 20px 27px;
     display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    justify-content: center;
+    justify-content: space-between;
+}
+  .score {
+    border: 2px solid #000;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 10px auto 5px;
+    background-color: #6ff562;
+    margin-bottom: 5px;
+  }
+  
+  .high-score {
+    border: 2px solid #000;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 10px auto 5px;
+    background-color: #6ff562;
+    margin-bottom: 5px;
+  }
+  
+  /*Play or Pause option */
+  .play-or-pause-control {
+    top: 10px;
+    left: 100px;
+    color: #fff;
+  }
+  
+  .play-or-pause-control .hide {
+    display: none;
   }
 
-  .fa-arrow-left-long,
-  .fa-arrow-up-long,
-  .fa-arrow-right-long,
-  .fa-arrow-down-long {
+/* Controls */
+#controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  #controls i {
     margin: 0 5px;
     font-size: 20px;
     color: #fff;
     cursor: pointer;
-    justify-content: center;
+    
   }
+
+  /* Game Over Screen */
+  #game-over-screen {
+    display: none;
+    /* Modal is hidden by default */
+   
+}
 
 /* Footer */
 footer {

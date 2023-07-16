@@ -1,6 +1,6 @@
- // Wait for the DOM to load
- document.addEventListener("DOMContentLoaded", function () {
-  // game variables
+// Wait for the DOM to load
+document.addEventListener("DOMContentLoaded", function () {
+  // dom variables
   const menuScreen = document.getElementById('menu-screen');
   const gameScreen = document.getElementById('game-screen');
   const gameOverScreen = document.getElementById('game-over-screen');
