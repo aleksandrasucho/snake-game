@@ -160,10 +160,8 @@ main {
 .box {
     width: 3rem;
     height: 3rem;
-    border-radius: 35%;
-    background: white;
-    border: solid 1px #16a085;
-    
+    background: #000;
+    border: solid 1px ;
 }
 
 /*Game Score */
