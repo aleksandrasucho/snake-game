@@ -53,6 +53,28 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
   
+ // Clear previous game grid
+ gameGrid.innerHTML = "";
+
+ // Create the new game grid
+ createGrid();
+
+ // Reset score display
+ scoreElement.textContent = "Score: 0";
+
+ // Generate initial apple
+ generateApple();
+
+ // Start the game loop
+ interval = setInterval(move, intervalTime);
+
+
+
+
+
+
+
+
   // Function to create the game grid
   function createGrid() {
     for (let i = 0; i < width * width; i++) {
@@ -62,6 +84,37 @@ document.addEventListener("DOMContentLoaded", function () {
       squares.push(square);
     }
   }
-
   createGrid();
+
+// Generate a new apple on the grid
+ function generateApple() {
+  do {
+    appleIndex = Math.floor(Math.random() * squares.length);
+  } while (squares[appleIndex].classList.contains('snake'));
+  let isAppleOver = false;
+  for (let i = 0; i < currentSnake.length; i++) {
+    if (currentSnake[i] == appleIndex) {
+      isAppleOver = true;
+    }
+  }
+  if (isAppleOver) {
+    generateApple();
+  }
+  squares[appleIndex].classList.add('apple');
+}
+generateApple();
+
+
+
+
+
+
+
+
+
+
+
+
 });
+
+ 

@@ -204,6 +204,15 @@ main {
     display: none;
   }
 
+  .snake {
+    background-color: #6ff562;
+    background-size: cover;
+  }
+
+  .apple {
+    background-color: red;
+  }
+
 /* Controls */
 #controls {
   position: relative;
