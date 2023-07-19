@@ -36,7 +36,7 @@ main {
     position: relative;
     background-color: black;
     border: 2px #6ff562 solid;
-    
+    margin-top: 50px;
     
 }
 
@@ -146,8 +146,10 @@ main {
   .game-grid {
     display: flex;
     flex-wrap: wrap;
-    width: 30rem;
-    height: 30rem;
+    align-items: center;
+    width: 31rem;
+    height: 31rem;
+    padding: 0.2rem;
     border: solid 2px #6ff562;
     margin: auto;
     flex-direction: row;
@@ -204,19 +206,42 @@ main {
 
 /* Controls */
 #controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
   }
-  
-  #controls i {
-    margin: 0 5px;
-    font-size: 20px;
-    color: #fff;
+
+  .arrow {
     cursor: pointer;
-    
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    background: #000;
+    color: #6ff562;
+    font-size: 30px;
+    border-right: 10px solid darken(grey, 20);
+    border-bottom: 10px solid darken(grey, 20);
+    border-left: 10px solid darken(grey, 15);
+    border-top: 10px solid darken(grey, 10);  
+    display: inline-block;
+    margin: 10px;
+    transition: all .05s linear;
+    &:active {
+    border-bottom: 8px solid darken(grey, 20);
+    text-shadow: 0 0 10px white, 0 0 10px white, 0 0 20px white;    
+    transform: translate(0, 2px);
   }
+    user-select: none;
+}
+
+.pressed {
+  border-bottom: 8px solid darken(grey, 20);
+  text-shadow: 0 0 10px white;
+  transform: translate(0, 2px);
+}
+
 
   /* Game Over Screen */
   #game-over-screen {

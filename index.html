@@ -10,6 +10,7 @@
     <title>Snake Game</title>
   </head>
   <body>
+    <main>
     <!-- Game Menu Area -->
     <section id="menu-screen">
       <div class="game-details">
@@ -52,10 +53,11 @@
           </div>
           <div class="game-grid"></div>
           <div id="controls">
-            <i data-key="ArrowLeft" class="fa-solid fa-arrow-left-long"></i>
-            <i data-key="ArrowUp" class="fa-solid fa-arrow-up-long"></i>
-            <i data-key="ArrowRight" class="fa-solid fa-arrow-right-long"></i>
-            <i data-key="ArrowDown" class="fa-solid fa-arrow-down-long"></i>
+            <div class="arrow up"><i class="fa fa-arrow-up"></i></div>
+            <br />
+            <div class="arrow left"><i class="fa fa-arrow-left"></i></div>  
+            <div class="arrow down"><i class="fa fa-arrow-down"></i></div>
+            <div class="arrow right"><i class="fa fa-arrow-right"></i></div>
           </div>
         <!--Game Over Screen-->
         <div id="game-over-screen">
@@ -86,6 +88,7 @@
           </a>
         </li>
       </ul>
+    </main>
     </footer>
     <!--Scripts-->
     <!--Font Awesome-->
