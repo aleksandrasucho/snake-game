@@ -39,8 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
     intervalTime = 500;
     startGame();
   });
-
-  // Function to start the game based on the chosen difficulty
+  
+/**
+ * Function to start the game based on the chosen difficulty
+ */
   function startGame(difficulty) {
     // Hide the menu screen and show the game screen
     menuScreen.style.display = "none";
@@ -72,7 +74,9 @@ document.addEventListener("DOMContentLoaded", function () {
  // Start the game loop
  interval = setInterval(move, intervalTime);
 
-  // Function to create the game grid
+/**
+ * Function to create the game grid
+ */
   function createGrid() {
     for (let i = 0; i < width * width; i++) {
       const square = document.createElement('div');
@@ -149,8 +153,9 @@ function move() {
  squares[currentSnake[0]].classList.add('snake');
 }
 
-
-// Clear game screen and display the score to user 
+/**
+ * Clear game screen and display the score to user
+ */ 
 function exitGame() {
   gameScreen.style.display = 'flex';
   gameOverScreen.style.display = 'block';
@@ -165,10 +170,16 @@ closeBtn.addEventListener('click', () => {
   displaygameScreen();
 });
 
+/**
+ * Function to close the game over modal
+ */
 function closeModal(modal) {
   modal.style.display = 'none';
 }
 
+/**
+ * Function to display the menu screen after closing the game over modal
+ */
 function displaygameScreen() {
   menuScreen.style.display = 'flex';
   gameScreen.style.display = 'none';
