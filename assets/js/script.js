@@ -1,3 +1,4 @@
+
 // Wait for the DOM to load
 document.addEventListener("DOMContentLoaded", function () {
   // Dom variables
@@ -8,9 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const gameGrid = document.querySelector(".game-grid");
   const scoreElement = document.querySelector(".score");
   const highScoreElement = document.querySelector(".high-score");
-  const gameControls = document.getElementById('controls');
+  const gameControls = document.getElementById('controls')
   const difficultyBtnEasy = document.getElementById('easy-button');
   const difficultyBtnHard = document.getElementById('hard-button');
+  const gameContainer = document.querySelector(".game-container");
+
+  const closeBtn = document.querySelector('.close');
 
   // Game variables
   let squares = [];
@@ -41,8 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
   function startGame(difficulty) {
     // Hide the menu screen and show the game screen
     menuScreen.style.display = "none";
-    gameScreen.style.display = "block";
-    gameContainer.style.display = "flex";
+    gameScreen.style.display = "flex";
+    
 
     if (difficulty === "easy") {
       // Easy game 
@@ -143,29 +147,50 @@ function move() {
 
  // Move the snake visually on the grid
  squares[currentSnake[0]].classList.add('snake');
-
-
-
-
 }
 
- // Event listener for arrow key presses
- document.addEventListener('keydown', function (event) {
+
+// Clear game screen and display the score to user 
+function exitGame() {
+  gameScreen.style.display = 'flex';
+  gameOverScreen.style.display = 'block';
+  modalText.textContent = `You scored: ${score}`;
+  return gameOver;
+}
+
+/* Close modal & return to home screen */
+closeBtn.addEventListener('click', () => {
+  closeModal(gameOverScreen);
+  displaygameScreen();
+});
+
+function closeModal(modal) {
+  modal.style.display = 'none';
+}
+
+function displaygameScreen() {
+  menuScreen.style.display = 'flex';
+  gameScreen.style.display = 'none';
+}
+
+// Event listener for arrow key presses
+document.addEventListener("keydown", function (event) {
   switch (event.key) {
-    case 'ArrowUp':
+    case "ArrowUp":
       if (direction !== width) direction = -width;
       break;
-    case 'ArrowDown':
+    case "ArrowDown":
       if (direction !== -width) direction = width;
       break;
-    case 'ArrowLeft':
+    case "ArrowLeft":
       if (direction !== 1) direction = -1;
       break;
-    case 'ArrowRight':
+    case "ArrowRight":
       if (direction !== -1) direction = 1;
       break;
   }
 });
+
 
 });
 

@@ -254,8 +254,20 @@ main {
   #game-over-screen {
     display: none;
     /* Modal is hidden by default */
-   
+    color: #6ff562;
+    position: fixed;
+
 }
+
+  .modal-header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  #modal-result {
+    justify-content: center;
+    text-align: center;
+  }
 
 /* Footer */
 footer {
