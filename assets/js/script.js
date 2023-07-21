@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const difficultyBtnEasy = document.getElementById('easy-button');
   const difficultyBtnHard = document.getElementById('hard-button');
   const gameContainer = document.querySelector(".game-container");
-
   const closeBtn = document.querySelector('.close');
 
   // Game variables
@@ -46,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Hide the menu screen and show the game screen
     menuScreen.style.display = "none";
     gameScreen.style.display = "flex";
+    gameOverScreen.style.display = "none";
     
 
     if (difficulty === "easy") {
@@ -158,7 +158,8 @@ function exitGame() {
   return gameOver;
 }
 
-/* Close modal & return to home screen */
+
+/// Close modal and return to home screen 
 closeBtn.addEventListener('click', () => {
   closeModal(gameOverScreen);
   displaygameScreen();
@@ -172,6 +173,7 @@ function displaygameScreen() {
   menuScreen.style.display = 'flex';
   gameScreen.style.display = 'none';
 }
+
 
 // Event listener for arrow key presses
 document.addEventListener("keydown", function (event) {
