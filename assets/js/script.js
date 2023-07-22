@@ -1,6 +1,5 @@
-
-
-  // Dom variables
+ 
+ // Dom variables
   const menuScreen = document.getElementById('menu-screen');
   const gameScreen = document.getElementById('game-screen');
   const gameOverScreen = document.getElementById('game-over-screen');
@@ -13,13 +12,10 @@
   const difficultyBtnHard = document.getElementById('hard-button');
   const gameContainer = document.querySelector(".game-container");
   const closeBtn = document.querySelector('.close');
-
   const playPauseControl = document.querySelector(".play-or-pause-control");
   const pauseIcon = document.querySelector(".fa-pause");
   const playIcon = document.querySelector(".fa-play");
   const stopIcon = document.querySelector(".fa-stop");
-
-
   // Game variables
   let squares = [];
   let currentSnake = [2, 1, 0];
@@ -29,13 +25,21 @@
   let score = 0;
   let intervalTime = 1000;
   let interval = 0;
-
   // Game state
   let isGameOver = false;
+  let isGamePaused = false;
   let intervalId = null;
+  let savedDirection = null; // Store the direction when pausing the game
 
   // Wait for the DOM to load
 document.addEventListener("DOMContentLoaded", function () {
+
+  // Event listener for pause and play icons
+  pauseIcon.addEventListener("click", pauseGame);
+  playIcon.addEventListener("click", resumeGame);
+
+  // Event listener for stop icon
+  stopIcon.addEventListener("click", stopGame);
 
   document.getElementById("btn-up").addEventListener("click", gameControlsClicked);
   document.getElementById("btn-down").addEventListener("click", gameControlsClicked);
@@ -44,12 +48,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Event listener for difficulty buttons
   difficultyBtnEasy.addEventListener('click', () => {
-    intervalTime = 1000;
+    intervalTime = 1500;
     startGame();
   });
   
   difficultyBtnHard.addEventListener('click', () => {
-    intervalTime = 500;
+    intervalTime = 750;
     startGame();
   });
   
@@ -61,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     menuScreen.style.display = "none";
     gameScreen.style.display = "flex";
     gameOverScreen.style.display = "none";
-    
+
 
     if (difficulty === "easy") {
       // Easy game 
@@ -70,6 +74,10 @@ document.addEventListener("DOMContentLoaded", function () {
       // Hard game 
       console.log("Starting hard game");
     }
+
+    // Start the game loop
+    interval = setInterval(move, intervalTime);
+    intervalId = interval;
   }
   
  // Clear previous game grid
@@ -126,6 +134,9 @@ function generateApple() {
  * Function to move the snake
  */
 function move() {
+  if (isGamePaused) {
+    return; // If paused, don't move the snake
+  }
   // Check for collisions with the boundaries or itself
   if (
     (currentSnake[0] % width === 0 && direction === -1) || // Hit left wall
@@ -166,6 +177,50 @@ function move() {
  squares[currentSnake[0]].classList.add('snake');
 }
 
+
+  /**
+   * Function to pause the game
+   */
+  function pauseGame() {
+    if (!isGameOver && !isGamePaused) {
+      clearInterval(intervalId);
+      isGamePaused = true;
+      savedDirection = direction; // Store the current direction
+      direction = null; // Stop the snake movement
+      pauseIcon.classList.add("hide");
+      playIcon.classList.remove("hide");
+    }
+  }
+
+  /**
+   * Function to resume the game
+   */
+  function resumeGame() {
+    if (!isGameOver && isGamePaused) {
+      intervalId = setInterval(move, intervalTime);
+      isGamePaused = false;
+      direction = savedDirection; // Restore the direction
+      savedDirection = null; // Clear the stored direction
+      playIcon.classList.add("hide");
+      pauseIcon.classList.remove("hide");
+    }
+  }
+
+  /**
+   * Function to stop the game
+   */
+  function stopGame() {
+    if (!isGameOver) {
+      clearInterval(intervalId);
+      isGameOver = true;
+      gameOverScreen.style.display = "block";
+      modalText.textContent = `Your score: ${score}`;
+      // ... (your existing code to clean up game state or show game over modal)
+    }
+  }
+
+
+
 /**
  * Clear game screen and display the score to user
  */ 
@@ -173,7 +228,6 @@ function exitGame() {
   gameScreen.style.display = 'flex';
   gameOverScreen.style.display = 'block';
   modalText.textContent = `You scored: ${score}`;
-  return gameOver;
 }
 
 
