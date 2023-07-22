@@ -167,7 +167,7 @@ main {
 
 /*Game Score */
 
-.score-and-high-score {
+.score-box {
     font-size: 1.2rem;
     font-weight: 500;
     padding: 20px 27px;
@@ -183,24 +183,28 @@ main {
     margin-bottom: 5px;
   }
   
-  .high-score {
-    border: 2px solid #000;
-    padding: 5px;
-    border-radius: 10px;
-    margin: 10px auto 5px;
-    background-color: #6ff562;
-    margin-bottom: 5px;
-  }
-  
-  /*Play or Pause option */
   .play-or-pause-control {
-    top: 10px;
-    left: 100px;
-    color: #fff;
+    position: absolute;
+    justify-content: center;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
   }
   
   .play-or-pause-control .hide {
     display: none;
+  }
+  
+  .play-or-pause-control i {
+    font-size: 30px;
+    color: #6ff562;
+    margin: 0 15px;
+    cursor: pointer;
+  }
+  
+  .play-or-pause-control i:hover {
+    color: #fff;
   }
 
   .snake {
@@ -218,38 +222,43 @@ main {
   margin: 0 auto;
   width: 100%;
   text-align: center;
-  }
-
-  .arrow {
-    cursor: pointer;
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    line-height: 100px;
-    background: #000;
-    color: #6ff562;
-    font-size: 30px;
-    border-right: 10px solid darken(grey, 20);
-    border-bottom: 10px solid darken(grey, 20);
-    border-left: 10px solid darken(grey, 15);
-    border-top: 10px solid darken(grey, 10);  
-    display: inline-block;
-    margin: 10px;
-    transition: all .05s linear;
-    &:active {
-    border-bottom: 8px solid darken(grey, 20);
-    text-shadow: 0 0 10px white, 0 0 10px white, 0 0 20px white;    
-    transform: translate(0, 2px);
-  }
-    user-select: none;
 }
 
-.pressed {
-  border-bottom: 8px solid darken(grey, 20);
+.arrow {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  background: #000;
+  color: #6ff562;
+  font-size: 30px;
+  border-right: 10px solid #444;
+  border-bottom: 10px solid #444;
+  border-left: 10px solid #333;
+  border-top: 10px solid #333;
+  display: inline-block;
+  margin: 10px;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.arrow:hover {
+  background-color: #6ff562;
+  color: #000;
+}
+
+.arrow:active {
+  border-bottom: 8px solid #444;
   text-shadow: 0 0 10px white;
   transform: translate(0, 2px);
 }
 
+.pressed {
+  border-bottom: 8px solid #444;
+  text-shadow: 0 0 10px white;
+  transform: translate(0, 2px);
+}
 
   /* Game Over Screen */
   #game-over-screen {
