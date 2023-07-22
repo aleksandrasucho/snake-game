@@ -1,6 +1,5 @@
 
-// Wait for the DOM to load
-document.addEventListener("DOMContentLoaded", function () {
+
   // Dom variables
   const menuScreen = document.getElementById('menu-screen');
   const gameScreen = document.getElementById('game-screen');
@@ -15,12 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const gameContainer = document.querySelector(".game-container");
   const closeBtn = document.querySelector('.close');
 
-
-
-  document.getElementById("btn-up").addEventListener("click", gameControlsClicked);
-  document.getElementById("btn-down").addEventListener("click", gameControlsClicked);
-  document.getElementById("btn-left").addEventListener("click", gameControlsClicked);
-  document.getElementById("btn-right").addEventListener("click", gameControlsClicked);
+  const playPauseControl = document.querySelector(".play-or-pause-control");
+  const pauseIcon = document.querySelector(".fa-pause");
+  const playIcon = document.querySelector(".fa-play");
+  const stopIcon = document.querySelector(".fa-stop");
 
 
   // Game variables
@@ -32,10 +29,18 @@ document.addEventListener("DOMContentLoaded", function () {
   let score = 0;
   let intervalTime = 1000;
   let interval = 0;
-  
+
   // Game state
   let isGameOver = false;
   let intervalId = null;
+
+  // Wait for the DOM to load
+document.addEventListener("DOMContentLoaded", function () {
+
+  document.getElementById("btn-up").addEventListener("click", gameControlsClicked);
+  document.getElementById("btn-down").addEventListener("click", gameControlsClicked);
+  document.getElementById("btn-left").addEventListener("click", gameControlsClicked);
+  document.getElementById("btn-right").addEventListener("click", gameControlsClicked);
 
   // Event listener for difficulty buttons
   difficultyBtnEasy.addEventListener('click', () => {
@@ -132,8 +137,7 @@ function move() {
     clearInterval(interval);
     modalText.textContent = `Your score: ${score}`;
     gameOverScreen.style.display = 'block';
-    exitGame();
-    return clearInterval(timerId);
+    return;
   }
 
  // Remove the tail of the snake
@@ -194,11 +198,7 @@ function displaygameScreen() {
   gameScreen.style.display = 'none';
 }
 
-
-
-
-
-// sets touch control directions 
+// Sets touch control directions 
 function gameControlsClicked() {
   if (this.getAttribute("id") === "btn-left") {
     direction = -1;
@@ -214,11 +214,6 @@ function gameControlsClicked() {
   }
 
 }
-
-
-
-
-
 
 
 // Event listener for arrow key presses
@@ -238,6 +233,7 @@ document.addEventListener("keydown", function (event) {
       break;
   }
 });
+
 
 });
 
