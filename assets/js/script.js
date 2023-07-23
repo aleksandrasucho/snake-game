@@ -179,7 +179,7 @@ squares[currentSnake[0]].classList.add('snake');
      pauseIcon.classList.add("hide");
      playIcon.classList.remove("hide");
    }
- }
+  };
 
  /**
   * Function to resume the game
@@ -193,7 +193,7 @@ squares[currentSnake[0]].classList.add('snake');
      playIcon.classList.add("hide");
      pauseIcon.classList.remove("hide");
    }
- }
+ };
 
  /**
   * Function to stop the game
@@ -206,7 +206,7 @@ squares[currentSnake[0]].classList.add('snake');
      modalText.textContent = `Your score: ${score}`;
      
    }
- }
+ };
 
 
 // Sets touch control directions 
@@ -279,7 +279,37 @@ function displaygameScreen() {
 /// Close modal and return to home screen 
 closeBtn.addEventListener('click', () => {
  closeModal(gameOverScreen);
+ resetGame();
  displaygameScreen();
 });
 
- }
+/**
+ * Function to reset the game to its initial state
+ */
+function resetGame() {
+  // Reset game variables
+  squares = [];
+  currentSnake = [2, 1, 0];
+  direction = 1;
+  appleIndex = 0;
+  score = 0;
+  intervalTime = 1000;
+  interval = 0;
+  isGameOver = false;
+  isGamePaused = false;
+  intervalId = null;
+  savedDirection = null;
+
+  // Clear previous game grid
+  gameGrid.innerHTML = "";
+
+  // Reset the score display
+  scoreElement.textContent = "Score: 0";
+
+  // Show the menu screen and hide the game and game over screens
+  menuScreen.style.display = "flex";
+  gameScreen.style.display = "none";
+  gameOverScreen.style.display = "none";
+}
+
+ };
