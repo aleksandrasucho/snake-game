@@ -62,7 +62,7 @@ function startGame(difficulty) {
     intervalTime = 750;
     console.log("Starting easy game");
   } else if (difficulty === "hard") {
-    intervalTime = 200;
+    intervalTime = 300;
     console.log("Starting hard game");
   }
 
