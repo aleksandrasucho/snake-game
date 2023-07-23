@@ -168,11 +168,13 @@ main {
 /*Game Score */
 
 .score-box {
-    font-size: 1.2rem;
-    font-weight: 500;
-    padding: 20px 27px;
-    display: flex;
-    justify-content: space-between;
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  
 }
   .score {
     border: 2px solid #000;
@@ -184,12 +186,12 @@ main {
   }
   
   .play-or-pause-control {
-    position: absolute;
-    justify-content: center;
+    position: fixed; /* Change to fixed position */
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
+    z-index: 2; /* Add this line */
   }
   
   .play-or-pause-control .hide {
