@@ -1,5 +1,3 @@
-/* jshint esversion: 8, jquery: true, scripturl: true */
-
 // Dom variables
 const menuScreen = document.getElementById('menu-screen');
 const gameScreen = document.getElementById('game-screen');
@@ -7,13 +5,9 @@ const gameOverScreen = document.getElementById('game-over-screen');
 const modalText = document.getElementById('modal-result');
 const gameGrid = document.querySelector(".game-grid");
 const scoreElement = document.querySelector(".score");
-const highScoreElement = document.querySelector(".high-score");
-const gameControls = document.getElementById('controls')
 const difficultyBtnEasy = document.getElementById('easy-button');
 const difficultyBtnHard = document.getElementById('hard-button');
-const gameContainer = document.querySelector(".game-container");
 const closeBtn = document.querySelector('.close');
-const playPauseControl = document.querySelector(".play-or-pause-control");
 const pauseIcon = document.querySelector(".fa-pause");
 const playIcon = document.querySelector(".fa-play");
 const stopIcon = document.querySelector(".fa-stop");
@@ -178,7 +172,7 @@ function pauseGame() {
     pauseIcon.classList.add("hide");
     playIcon.classList.remove("hide");
   }
-};
+}
 
 /**
  * Function to resume the game
@@ -192,7 +186,7 @@ function resumeGame() {
     playIcon.classList.add("hide");
     pauseIcon.classList.remove("hide");
   }
-};
+}
 
 /**
  * Function to stop the game
@@ -204,7 +198,7 @@ function stopGame() {
     gameOverScreen.style.display = "block";
     modalText.textContent = `Your score: ${score}`;
   }
-};
+}
 
  // Sets touch control directions 
 function gameControlsClicked() {
@@ -244,7 +238,7 @@ const keyControlFunction = (event) => {
 /**
  * Clear game screen and display the score to user
  */ 
-function exitGame() {
+ function exitGame() {
   gameScreen.style.display = 'flex';
   gameOverScreen.style.display = 'block';
   modalText.textContent = `You scored: ${score}`;

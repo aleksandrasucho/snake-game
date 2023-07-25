@@ -152,9 +152,9 @@ The combination of these colors can create a striking and dynamic visual experie
 
 #### Mobile devices
 
-- [Menu Page. Mobile Screen](documentation)
-- [Game Page. Mobile Screen](documentation)
-- [Game Over Page. Mobile Screen](documentation)
+- [Menu Page. Mobile Screen](documentation/snake-mobile-min.png)
+- [Game Page. Mobile Screen](documentation/snake-mobile-game-screen-min.png)
+- [Game Over Page. Mobile Screen](documentation/snake-game-over-min.png)
 
 
 
@@ -304,18 +304,66 @@ In order to confirm the correct functionality, responsiveness, and appearance:
     - No errors or warnings were found when passing through the official W3C validator.
 
 
-    ![Home Page HTML Validator](documentation/validator-check-home.PNG)
+    ![Home Page HTML Validator](documentation/snake-html-validator-min.png)
 
-    ####  Page
-    - No errors or warnings were found when passing through the official W3C validator.
++ ### CSS
+    - No errors or warnings were found when passing through the official [W3C (Jigsaw)](https://jigsaw.w3.org/css-validator/#validate_by_uri) validator. 
+
+    ![CSS Validator Errors](documentation/snake-css-validator.png)
+   
+
++ ### JS
+    - No errors or warnings were found when passing through the official [JSHint](https://jshint.com/) validator.
+
+    ![JSHint  JS](documentation/snake-js-validator.png)
+
+ + ### Accessibility and performance 
+    - Using lighthouse in devtools I confirmed that the website is performing well, accessible and colors and fonts chosen are readable.
+    
+    ![Lighthouse testing for desktop](documentation/lighthouse-validator.png)
+
+---
+## Deployment
+
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - In the [GitHub repository](https://github.com/aleksandrasucho/snake-game), navigate to the Settings tab 
+  - From the source section drop-down menu, select the **Main** Branch, then click "Save".
+  - The page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+The live link can be found [here](https://aleksandrasucho.github.io/snake-game/)
+
+## Local Deployment
+
+In order to make a local copy of this project, you can clone it.
+In your IDE Terminal, type the following command to clone my repository:
+
+- `git clone https://github.com/aleksandrasucho/snake-game`
 
 
-    ![Events Page HTML Validator](documentation/events-page-validator.PNG)
+## Credits
 
-  #### Gallery Page
-    - No errors or warnings were found when passing through the official W3C validator.
+#### Media
+ - [1st image](https://www.pngwing.com/en/free-png-ylihb/download);
 
-    ![Gallery Page HTML Validator](documentation/gallery-page-validator.PNG)
+#### Tools
+
+- [Compress JPEG](https://compressjpeg.com/) was used to compress JPEG images.
+- [IMGonline.com.ua](https://www.imgonline.com.ua/eng/resize-image.php) was used to    resize images.
+- [EzGif](https://ezgif.com) was used to resize GIF images.
+- [GIMP](https://www.gimp.org/) was used to edit all README.md images.
+- [cooler](https://coolors.co/) was used to create the color palette.
+
+
+---
+
+## Acknowledgments
+
+- [Juliia Konovalova ](https://github.com/IuliiaKonovalova) was a great supporter. She guided me through the development of the project and helped me to learn a lot of new things by challenging me to do something new.
+- [Code Institute](https://codeinstitute.net/) tutors and Slack community members for their support and help.
+- [Kevin Powell](https://www.youtube.com/user/KepowOb) for his amazing CSS tutorials.
+
+---
+
 
 
 
