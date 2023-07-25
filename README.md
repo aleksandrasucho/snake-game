@@ -282,5 +282,41 @@ In order to confirm the correct functionality, responsiveness, and appearance:
 
 + The functionality of the links in the app was checked as well by different users.
 
+---
+​
+### Bugs
++ ##### Solved bugs
+
+    1. The game did not want to reset after playing the first time. 
+        
+        *Solution:* Add the ```function resetGame()```, as I forgot to write this code before. 
+    ---
++ ##### Unsolved bugs
+    - None.
++ ##### Mistakes
+    - Mistakes were made while committing changes. I used past simple tense in commits due to the habit when I just started working on this project.
+    - While progressing in my code I learned to use present simple tense in commits.
+
+    ---
+## Validator testing
++ ### HTML
+  #### Menu Page
+    - No errors or warnings were found when passing through the official W3C validator.
+
+
+    ![Home Page HTML Validator](documentation/validator-check-home.PNG)
+
+    ####  Page
+    - No errors or warnings were found when passing through the official W3C validator.
+
+
+    ![Events Page HTML Validator](documentation/events-page-validator.PNG)
+
+  #### Gallery Page
+    - No errors or warnings were found when passing through the official W3C validator.
+
+    ![Gallery Page HTML Validator](documentation/gallery-page-validator.PNG)
+
+
 
 

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,65 +11,73 @@
   </head>
   <body>
     <main>
-    <!-- Game Menu Area -->
-    <section id="menu-screen">
-      <div class="game-details">
-        <div class="game-heading">
-          <h1>Snake Game</h1>
-        </div>
-        <div class="snake-image">
-          <img src="assets/images/snake-logo.png" alt="a coiled snake, hissing">
-        </div>
-        <div class="game-menu">
-          <!--Game Instructions-->
-          <div class="how-to-play">
-            <h2>How To Play:</h2>
-            <ul class="instructions">
-              <li>Use ARROW keys or TOUCH ARROWS to move!</li>
-              <li>Guide the snake around the game area.</li>
-              <li>Collect food to increase your Score.</li>
-              <li>If the snake hits the barrier or itself, it's game over!</li>
-            </ul>
+      <!-- Game Menu Area -->
+      <section id="menu-screen">
+        <div class="game-details">
+          <div class="game-heading">
+            <h1>Snake Game</h1>
           </div>
-          <!--Level of Difficulty also starts the game-->
-          <h2 class="level">Choose Your Difficulty and Start the Game!</h2>
-          <div class="row">
-            <button class="difficulty-button" id="easy-button">Easy</button>
-            <button class="difficulty-button" id="hard-button">Hard</button>
+          <div class="snake-image">
+            <img src="assets/images/snake-logo.png" alt="a coiled snake, hissing">
           </div>
-    </section>
-    <section id="game-screen" class="hidden">
-      <!--Game Screen-->
-      <div class="game-container">
-        <!--Game Controls-->
-        <div class="score-box">
-        <span class="score">Score: 0</span>
-        </div>
-        <div class="play-or-pause-control hide">
-          <i class="fas fa-pause" id="pause-icon"></i>
-          <i class="fas fa-play hide" id="play-icon"></i>
-          <i class="fas fa-stop" id="stop-icon"></i>
+          <div class="game-menu">
+            <!--Game Instructions-->
+            <div class="how-to-play">
+              <h2>How To Play:</h2>
+              <ul class="instructions">
+                <li>Use ARROW keys or TOUCH ARROWS to move!</li>
+                <li>Guide the snake around the game area.</li>
+                <li>Collect food to increase your Score.</li>
+                <li>If the snake hits the barrier or itself, it's game over!</li>
+              </ul>
+            </div>
+            <!--Level of Difficulty also starts the game-->
+            <h2 class="level">Choose Your Difficulty and Start the Game!</h2>
+            <div class="row">
+              <button class="difficulty-button" id="easy-button">Easy</button>
+              <button class="difficulty-button" id="hard-button">Hard</button>
+            </div>
+      </section>
+      <section id="game-screen" class="hidden">
+        <!--Game Screen-->
+        <div class="game-container">
+          <!--Game Controls-->
+          <div class="score-box">
+            <span class="score">Score: 0</span>
+          </div>
+          <div class="play-or-pause-control hide">
+            <i class="fas fa-pause" id="pause-icon"></i>
+            <i class="fas fa-play hide" id="play-icon"></i>
+            <i class="fas fa-stop" id="stop-icon"></i>
           </div>
           <div class="game-grid-play-on-desktop-message">Play it on a Desktop Device</div>
           <div class="game-grid"></div>
           <div id="controls">
-            <button id="btn-up" class="arrow up"><i class="fa fa-arrow-up"></i></button>
+            <button id="btn-up" class="arrow up">
+              <i class="fa fa-arrow-up"></i>
+            </button>
             <br />
-            <button id="btn-left" class="arrow left"><i class="fa fa-arrow-left"></i></button>  
-            <button id="btn-down" class="arrow down"><i class="fa fa-arrow-down"></i></button>
-            <button id="btn-right" class="arrow right"><i class="fa fa-arrow-right"></i></button>
+            <button id="btn-left" class="arrow left">
+              <i class="fa fa-arrow-left"></i>
+            </button>
+            <button id="btn-down" class="arrow down">
+              <i class="fa fa-arrow-down"></i>
+            </button>
+            <button id="btn-right" class="arrow right">
+              <i class="fa fa-arrow-right"></i>
+            </button>
           </div>
-        <!--Game Over Screen-->
-        <div id="game-over-screen">
-          <div class="modal">
-            <span class="close">
-              <i class="fas fa-times"></i>
-            </span>
-            <h2 class="modal-header">Game Over!</h2>
-            <p id="modal-result"></p>
+          <!--Game Over Screen-->
+          <div id="game-over-screen">
+            <div class="modal">
+              <span class="close">
+                <i class="fas fa-times"></i>
+              </span>
+              <h2 class="modal-header">Game Over!</h2>
+              <p id="modal-result"></p>
+            </div>
           </div>
-        </div>
-    </section>
+      </section>
     </main>
     <footer>
       <ul class="social-networks">
