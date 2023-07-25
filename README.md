@@ -58,7 +58,7 @@ The site can be accessed by this [link]()
      ---
 
 
-+ ### Game Screen
++ ### Game Page
     The Game Screen is where all the action takes place. It provides the gameplay area where the player controls the snake to eat food and grow. It is the heart of the game, and the player spends most of their time here.
 
      ![Game Screen Page](documentation/snake-game-screen-min.png)
@@ -101,4 +101,95 @@ The site can be accessed by this [link]()
             Although the Game Over Screen is a separate element, it is an essential part of the Game Screen. When the game ends, whether due to the snake colliding with a barrier or itself, the Game Over Screen is triggered. It displays a modal window with a "Game Over!" message and the player's final score.
 
             ![Game Over Screen](documentation/snake-game-over-min.png)
+
++ ### Game Over Page
+
+    The Game Over screen appears when the game ends (snake hits a barrier or itself).
+
+    * The Game Over screen has the following elements:
+        1. Modal window with a "Game Over!" message.
+        2. Display of the player's score.
+        3. Option to close the modal and return to the Menu screen.
+
+![Game Over Screen](documentation/snake-game-over-min.png)
+
+## Future Features
+
+###  Hammer JS Touch Controls 
+
+* Unfortunately, due to the tight deadline, I was unable to  implement touch screen gestures with Hammer JS. Nevertheless, this functionality remains a top priority for the upcoming scheduled upgrade!
+
+###  High Score
+
+* A persistent display element would be added to the game screen, showcasing the user's all-time highest score. By having this prominently visible atop the current score, players would be continuously reminded of their peak performance, encouraging them to strive for better results.
+
+## Technologies Used
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) was used as the foundation of the site.
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/css) - was used to add the styles and layout of the site.
+- [CSS Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox) - was used to arrange items simmetrically on the pages.
+- [Balsamiq](https://balsamiq.com/) was used to make wireframes for the website.
+- [VSCode](https://code.visualstudio.com/) was used as the main tool to write and edit code.
+- [Git](https://git-scm.com/) was used for the version control of the website.
+- [GitHub](https://github.com/) was used to host the code of the website.
+- [Compress PNG](https://compresspng.com/) was used to compress images.
+
+## Design
+
+### Color Scheme
+
+![Color pallete](documentation/snake-color-pallete-min.png)
+
+The combination of these colors can create a striking and dynamic visual experience. The contrast between black and the vibrant lime green and red can make elements pop and draw attention, while the darker grays help balance and unify the overall composition.
+
+### Typography
+
+![Main Font](documentation/main-font-min.png)
+
+- Inter Google Font was used as the main font of the website in order to increase readability of the content on the pages.
+
+### Wireframes
+
+#### Mobile devices
+
+- [Menu Page. Mobile Screen](documentation)
+- [Game Page. Mobile Screen](documentation)
+- [Game Over Page. Mobile Screen](documentation)
+
+
+
+#### Tablets
+
+- [Menu Page](documentation/tablet-menu-page-min.png)
+- [Game Page](documentation/tablet-game-page-min.png)
+- [Game Over Page](documentation/tablet-game-over-page-min.png)
+
+#### Desktop
+
+- [Menu Page](documentation/desktop-menu-page-min.png)
+- [Game Page](documentation/desktop-game-page-min.png)
+- [Game Over Page](documentation/desktop-game-over-page-min.png)
+
+
+
+---
+
+## Testing
+
+In order to confirm the correct functionality, responsiveness, and appearance:
+
++ The website was tested on the following browsers: Chrome, Firefox, Brave.
+
+    - Chrome:
+
+    ![Chrome](documentation/)
+
+    - FireFox:
+
+    ![FireFox](documentation/)
+
+    - Brave:
+
+    ![Brave](documentation/)
+
 
