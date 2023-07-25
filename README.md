@@ -6,7 +6,7 @@
 
 A snake game is a classic game in which the player controls a snake that moves around a playing field or grid. The objective of the game is to eat food items that appear randomly on the screen, which causes the snake to grow longer. 
 
-The site can be accessed by this [link]()
+The site can be accessed by this [link](https://aleksandrasucho.github.io/snake-game/)
 
 ![Responsive Mockup](documentation/responsive-snake-min.png)
 
