@@ -191,7 +191,7 @@ img {
   
   .play-or-pause-control {
     position: fixed; 
-    top: 120px;
+    top: 28px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -355,6 +355,9 @@ footer {
 
 
 /* ----MEDIA---- */
+
+
+
 @media screen and (max-width: 536px) {
 
 .game-container::before{
@@ -366,5 +369,21 @@ align-items: center;
 font-weight: 900;
 font-style: italic;
 width: 100%;
+text-align: center;
+}
+.game-grid {
+  display: none;
+  }
+
+#controls {
+  display: none;
+}
+
+.score {
+  display: none;
+}
+
+.play-or-pause-control {
+  display: none;
 }
 }
