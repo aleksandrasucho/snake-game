@@ -182,14 +182,105 @@ In order to confirm the correct functionality, responsiveness, and appearance:
 
     - Chrome:
 
-    ![Chrome](documentation/)
+    ![Chrome](documentation/Snake_Game_-_Google_Chrome_2023-07-25_14-06-17_AdobeExpress-min.gif)
 
     - FireFox:
 
-    ![FireFox](documentation/)
+    ![FireFox](documentation/Snake_Game_—_Mozilla_Firefox_2023-07-25_14-41-15_AdobeExpress-min.gif)
 
     - Brave:
 
-    ![Brave](documentation/)
+    ![Brave](documentation/Snake_Game_-_Brave_2023-07-25_14-46-02_AdobeExpress-min.gif)
+
+
+    + The website was checked by devtools implemented in Firefox and Chrome browsers.
+
+    + The app was checked with [Responsive Website Design Tester](https://responsivedesignchecker.com/).
+
+    1. Mobile Screens:
+
+        - Mobile 320x480:
+
+        ![Mobile 320x480](documentation/Responsive_Website_Design_Tester___Media_Genesis_-_Google_Chrome_2023-07-25_14-56-29_AdobeExpress-min.gif)
+
+        - Mobile 320x568:
+
+        ![Mobile 320x568](documentation/Mobile%20320x568-min.gif)
+
+        - Mobile 360x640:
+
+        ![Mobile 360x640](documentation/360x640-min.gif)
+
+        - Mobile 375x667:
+
+        ![Mobile 375x667](documentation/Mobile%20375x667-min.gif)
+
+        - Mobile 384x640:
+
+        ![Mobile 384x640](documentation/Mobile%20384x640-min.gif)
+
+        - Mobile 411x731:
+
+        ![Mobile 411x731](documentation/Mobile%20411x731-min.gif)
+
+        - Mobile 414x736:
+
+        ![Mobile 414x736](documentation/Mobile%20414x736-min.gif)
+
+    1. Tablets Screens:
+
+        - Tablet 600x960:
+        
+        ![Tablet 600x960](documentation/Tablet%20600x960-min.gif)
+
+        - Tablet 768x1024:
+
+        ![Tablet 768x1024](documentation/Tablet%20768x1024-min.gif)
+
+        - Tablet 800x1280:
+        
+        ![Tablet 800x1280](documentation/Tablet%20800x1280-min.gif)
+
+        - Tablet 1366x1024:
+
+        ![Tablet 1366x1024](documentation/Tablet%201366x1024-min.gif)
+
+     1. Desktop Screens:
+
+        - Desktop 1024x600:
+        
+        ![Desktop 1024x600](documentation/1024x600-min.gif)
+
+        - Desktop 1024x800:
+
+        ![Desktop 1024x800](documentation/Desktop%201024x800-min.gif)
+
+        - Desktop 1366x768:
+        
+        ![Desktop 1366x768](documentation/Desktop%201366x768-min.gif)
+
+        - Desktop 1440x900:
+
+        ![Desktop 1440x900](documentation/1440x900-min.gif)
+
+        - Desktop 1600x900:
+        
+        ![Desktop 1600x900](documentation/Desktop%201600x900-min.gif)
+
+        - Desktop 1680x1050:
+
+        ![Desktop 1680x1050](documentation/Desktop%201680x1050-min.gif)
+
+        - Desktop 1920x1080:
+        
+        ![Desktop 1920x1080](documentation/Desktop%201920x1080-min.gif)
+
+        - Desktop 1920x1200:
+
+        ![Desktop 1920x1200](documentation/Desktop%201920x1200-min.gif)
+
+
++ The functionality of the links in the app was checked as well by different users.
+
 
 
