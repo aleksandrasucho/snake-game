@@ -289,10 +289,10 @@ In order to confirm the correct functionality, responsiveness, and appearance:
 
     1. The game did not want to reset after playing the first time. 
         
-        *Solution:* Add the ```function resetGame()```, as I forgot to write this code before. 
+        *Solution:*  After restructuring the code, I have noticed that this function is missing:  ```function resetGame()```
     ---
 + ##### Unsolved bugs
-    - None.
+    - The game is currently not responsive for mobile devices, but it is something that I will improve in the future.
 + ##### Mistakes
     - Mistakes were made while committing changes. I used past simple tense in commits due to the habit when I just started working on this project.
     - While progressing in my code I learned to use present simple tense in commits.
@@ -344,6 +344,7 @@ In your IDE Terminal, type the following command to clone my repository:
 
 #### Media
  - [1st image](https://www.pngwing.com/en/free-png-ylihb/download);
+ - [Snake Coding Tutorial](https://www.youtube.com/watch?v=QTcIXok9wNY&t=372s)
 
 #### Tools
 
